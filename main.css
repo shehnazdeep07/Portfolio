@@ -3,7 +3,7 @@
 
 /*===== VARIABLES CSS =====*/
 :root{
-    --header-height: 3rem;
+    --header-height: 4rem;
     --font-medium: 500;
 }
 
@@ -127,14 +127,14 @@ img{
     justify-content: space-between;
     align-items: center;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 925px){
     .nav__menu{
         position: fixed;
         top: var(--header-height);
         right: -100%;
         width: 80%;
         height: 100%;
-        padding: 2rem;
+        padding: 1rem;
         background-color: rgba(255,255,255,.3);
         transition: .5s;
         backdrop-filter: blur(10px);
@@ -180,15 +180,19 @@ img{
     position: relative;
     background-color:#FFF;
     overflow: hidden;
+    background-image: url('assets/home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    margin-top: 90px;
+    height: 100%;
 }
-.home__container{
-    height: calc(100vh - var(--header-height));
-    row-gap: 5rem;
-}
+ 
+
 .home__title{
     align-self: flex-end;
     font-size: var(--h2-font-size);
-    color: var(--text-color);
+    color: var(--dark-color);
     line-height: 1;
 }
 .home__title span{
@@ -203,12 +207,7 @@ img{
     transform: rotate(-180deg);
     color: var(--dark-color);
 }
-.home__img{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 295px;
-}
+ 
 
 /* ===== ABOUT =====*/
 .about__container{
@@ -276,12 +275,12 @@ img{
 /* ===== PUBLICATIONS =====*/
 .publications{
     background-color: var(--white-color);
-    line-height: 65px;
+    
 }
 .publications__container{
     justify-items: center;
     row-gap: 2rem;
-    line-height: 65px;
+    box-flex-group: red;
 }
 .publications__img{
     position: relative;
@@ -336,13 +335,15 @@ img{
 
 /* ===== MEDIA QUERIES =====*/
 /* For small devices */
-@media screen and (max-width: 320px) {
-  .home__img {
-    width: 230px;
+@media screen and (max-width: 380px) {
+  .home__container {
+    height: 20vh;
+    grid-template-rows: 0.1fr 0fr;
+    
   }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 925px){
     body{
         margin: 0;
     }
@@ -379,17 +380,12 @@ img{
     .active::after{
         background-color: var(--white-color);
     }
-
     .home__container{
-        height: 80vh;
+        height: 60vh;
         grid-template-rows: 1.7fr 1fr;
         row-gap: 0;
     }
-    .home__img{
-        width: 524px;
-        right: 10%;
-         
-    }
+     
 
     .about__container{
         grid-template-columns: repeat(2, 1fr);
@@ -439,11 +435,7 @@ img{
 
 /* For tall screens on mobiles y desktop*/
 @media screen and (min-height: 721px) {
-    .home__container {
-        height: 640px;
-    }
-    .home__img {
-        width: 500px;
-        right: 24%;
-    }
+     
+    
+    
 }
