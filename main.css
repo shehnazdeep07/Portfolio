@@ -97,7 +97,7 @@ img{
     left: 0;
     right: 0;
     margin: auto;
-    top: 2rem;
+    top: 2.5rem;
     background-color: var(--first-color);
 }
 
@@ -126,8 +126,11 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    word-wrap: break-word;
+    font-size: var(--font-medium);
+    font-weight: 600;
 }
-@media screen and (max-width: 925px){
+@media screen and (max-width: 934px){
     .nav__menu{
         position: fixed;
         top: var(--header-height);
@@ -142,10 +145,13 @@ img{
 }
 .nav__item{
     margin-bottom: var(--mb-4);
+    margin-top: var(--mb-3);
+    display:block;
 }
 .nav__link{
     position: relative;
     color: var(--dark-color);
+    word-wrap: break-word;
 }
 .nav__link:hover{
     color: var(--first-color);
@@ -184,7 +190,7 @@ img{
     background-size: cover;
     background-position: center;
     background-repeat:no-repeat;
-    margin-top: 90px;
+    margin-top: 50px;
     height: 100%;
 }
  
@@ -221,34 +227,7 @@ img{
     text-align: center;
 
 }
-.about__img{
-    display: flex;
-    justify-content: center;
-    padding-top: 1rem;
-    width: 200px;
-    height: 200px;
-    background-color: var(--white-color);
-    border-radius: 50%;
-    overflow: hidden;
-    border-radius: 1px;
-}
  
-.about__img img{
-    width: 200px;
-}
-.edu__img{
-    display: flex;
-     
-    
-    margin-right: 10px;
-    width: 130px;
-    height: 130px;
-    background-color: var(--white-color);
-    
-    overflow: hidden;
-    border-radius: 1px;
-
-}
 .about__img img{
     width: 200px;
 }
@@ -335,15 +314,13 @@ img{
 
 /* ===== MEDIA QUERIES =====*/
 /* For small devices */
-@media screen and (max-width: 380px) {
-  .home__container {
-    height: 20vh;
-    grid-template-rows: 0.1fr 0fr;
-    
-  }
+@media screen and (max-width: 374px) {
+     
+      
+     
 }
 
-@media screen and (min-width: 925px){
+@media screen and (min-width: 934px){
     body{
         margin: 0;
     }
@@ -363,6 +340,7 @@ img{
     }
     .nav__list{
         display: flex;
+         
     }
     .nav__item{
         margin-left: var(--mb-4);
@@ -393,13 +371,7 @@ img{
         text-align: initial;
         padding: 4rem 0;
     }
-    .about__img{
-        width: 200px;
-        height: 200px;
-    }
-    .about__img img{
-        width: 165px;
-    }
+     
 
     .education__container{
         grid-template-columns: repeat(2, 1fr);
@@ -430,7 +402,7 @@ img{
     .bd-grid{
         margin-left: auto;
         margin-right: auto;
-    }
+    
 }
 
 /* For tall screens on mobiles y desktop*/
